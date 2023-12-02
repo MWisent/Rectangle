@@ -55,6 +55,15 @@ public class Rectangle {
         this.y += y;
     }
 
+    public boolean containsPoint(Point p) {
+
+        int minX = x - (int) (width / 2);
+        int maxX = x + (int) (width / 2);
+        int minY = y - (int) (width / 2);
+        int maxY = y + (int) (width / 2);
+
+        return p.getX() >= minX && p.getX() <= maxX && p.getY() >= minY && p.getY() <= maxY;
+    }
 
     @Override
     public boolean equals(Object o) {
